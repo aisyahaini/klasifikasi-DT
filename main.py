@@ -206,7 +206,9 @@ def evaluate_model(clf, X_test, y_test):
     metrics_df = pd.DataFrame(metrics_data)
 
     # Menampilkan tabel metrik evaluasi
-    st.table(metrics_df)
+    #st.table(metrics_df)
+    st.write(f"### Akurasi Model :")
+    st.write(f"{accuracy:.2%}")
     
 #@st.cache(allow_output_mutation=True)
 def single_predict(clf, class_mapping):
