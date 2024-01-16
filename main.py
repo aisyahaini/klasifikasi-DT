@@ -49,7 +49,7 @@ def plot_gender_weight_distribution(df):
                     ha='center', va='center', fontsize=10, color='black', xytext=(0, 5),
                     textcoords='offset points')
 
-    plt.title("Plot Untuk Atribut Gender", size=15)
+    plt.title("Grafik Untuk Atribut Gender", size=15)
     
     st.pyplot(fig)
 
@@ -64,7 +64,7 @@ def plot_age_weight_distribution(df):
                     ha='center', va='center', fontsize=6, color='black', xytext=(0, 5),
                     textcoords='offset points')
 
-    plt.title("Plot Untuk Atribut Age", size=15)
+    plt.title("Grafik Untuk Atribut Age", size=15)
     
     st.pyplot(fig)
     
@@ -79,7 +79,7 @@ def plot_height_weight_distribution(df):
                     ha='center', va='center', fontsize=10, color='black', xytext=(0, 5),
                     textcoords='offset points')
 
-    plt.title("Plot Untuk Atribut Height", size=15)
+    plt.title("Grafik Untuk Atribut Height", size=15)
     
     st.pyplot(fig)
     
@@ -94,7 +94,7 @@ def plot_weight_weight_distribution(df):
                     ha='center', va='center', fontsize=10, color='black', xytext=(0, 5),
                     textcoords='offset points')
 
-    plt.title("Plot Untuk Atribut Weight", size=15)
+    plt.title("Grafik Untuk Atribut Weight", size=15)
     
     st.pyplot(fig)
     
@@ -109,7 +109,7 @@ def plot_bmi_weight_distribution(df):
                     ha='center', va='center', fontsize=10, color='black', xytext=(0, 5),
                     textcoords='offset points')
 
-    plt.title("Plot Untuk Atribut BMI", size=15)
+    plt.title("Grafik Untuk Atribut BMI", size=15)
     st.pyplot(fig)
 
 def plot_heatmap_weight_classification():
@@ -243,7 +243,7 @@ def single_predict(clf, class_mapping):
     # Map the gender to the actual label
     new_attributes_df["Gender"] = new_attributes_df["Gender"].map({1: "Perempuan", 2: "Laki-Laki"})
     
-    st.write("Array Untuk Atribut Prediksi Baru:")
+    st.subheader("Array Untuk Atribut Prediksi Baru:")
     st.write(new_attributes_df)
 
     # Make a prediction using the model
@@ -255,11 +255,11 @@ def single_predict(clf, class_mapping):
     # Map the predicted class to the actual label
     predicted_label = class_mapping.get(prediction[0], "Unknown")
 
-    st.write("Klasifikasi Berat Badan :")
+    st.subheader("Hasil Klasifikasi Untuk Berat Badan :")
     st.write(predicted_label)
 
     # Display the result in the Streamlit app
-    st.write(f"Hasil Klasifikasi Untuk Berat Badan : {predicted_label}")
+    #st.write(f"Hasil Klasifikasi Untuk Berat Badan : {predicted_label}")
 
 
 def get_label(text):
@@ -347,12 +347,12 @@ def main():
 
             if df is not None:
                 # Display DataFrame
-                st.write("Dataset :")
-                st.write(df.head())
+                #st.write("Dataset :")
+                #st.write(df.head())
 
                 # Plot label and gender-weight distribution
-                plot_label_distribution(df)
-                plot_gender_weight_distribution(df)
+                #plot_label_distribution(df)
+                #plot_gender_weight_distribution(df)
 
                 # Preprocess data
                 df = preprocess_data(df)
