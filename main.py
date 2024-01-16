@@ -154,7 +154,7 @@ def evaluate_model(clf, X_test, y_test):
     accuracy = accuracy_score(y_test, weight_prediction, normalize=True)
     
     # Display the accuracy in the Streamlit app
-    st.subheader(f"### Confusion Matrix dan Akurasi Model:")
+    st.subheader("Confusion Matrix dan Akurasi Model")
     #st.write(f"{accuracy:.2%}")
     
     y_pred = clf.predict(X_test)
