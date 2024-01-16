@@ -287,7 +287,7 @@ def classify_gender(gender):
 def main():
     global clf, class_mapping # Declare clf as a global variable
 
-    st.sidebar.title("Aplikasi Klastering Decision Tree Obesity")
+    st.sidebar.title("Aplikasi Classification Decision Tree Obesity")
 
     menu = ["Input File CSV", "Single Predict"]
     choice = st.sidebar.selectbox("Pilih Menu", menu)
