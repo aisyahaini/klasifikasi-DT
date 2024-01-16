@@ -154,7 +154,7 @@ def evaluate_model(clf, X_test, y_test):
     accuracy = accuracy_score(y_test, weight_prediction, normalize=True)
     
     # Display the accuracy in the Streamlit app
-    st.write(f"### Model Accuracy:")
+    st.subheader(f"### Confusion Matrix dan Akurasi Model:")
     #st.write(f"{accuracy:.2%}")
     
     y_pred = clf.predict(X_test)
@@ -207,7 +207,7 @@ def evaluate_model(clf, X_test, y_test):
 
     # Menampilkan tabel metrik evaluasi
     #st.table(metrics_df)
-    st.write(f"### Akurasi Model :")
+    st.write("### Akurasi Model :")
     st.write(f"{accuracy:.2%}")
     
 #@st.cache(allow_output_mutation=True)
